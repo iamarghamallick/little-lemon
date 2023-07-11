@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html {
+    overflow-x: hidden;
+}
+
+.active {
+    background: #495E57;
+    color: white;
+}
+.active:hover {
+    background: #69887e !important;
+}
