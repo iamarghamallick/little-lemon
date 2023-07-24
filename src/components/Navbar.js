@@ -4,7 +4,7 @@ import NavLogo from '../assets/nav-logo.png'
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
-    const [currUrl, setCurrUrl] = useState({ currUrl: "" });
+    const [, setCurrUrl] = useState({ currUrl: "" });
 
     const toggleNavbar = () => {
         setIsOpen(!isOpen);
@@ -22,12 +22,12 @@ const Navbar = () => {
                     <div className="hidden lg:block">
                         <div className="ml-10 flex items-baseline space-x-4">
                             <Link to="/" className={`text-gray-900 hover:bg-gray-50 px-3 py-2 rounded-md text-xl font-medium ${location.pathname === "/" ? "active" : ""}`}>Home</Link>
-                            <Link to="/about" className={`text-gray-900 hover:bg-gray-50 px-3 py-2 rounded-md text-xl font-medium ${location.pathname == "/about" ? "active" : ""}`}>About</Link>
-                            <Link to="/menu" className={`text-gray-900 hover:bg-gray-50 px-3 py-2 rounded-md text-xl font-medium ${location.pathname == "/menu" ? "active" : ""}`}>Menu</Link>
-                            <Link to="/reservation" className={`text-gray-900 hover:bg-gray-50 px-3 py-2 rounded-md text-xl font-medium ${location.pathname == "/reservation" ? "active" : ""}`}>Reservation</Link>
-                            <Link to="/orderonline" className={`hidden xl:block text-gray-900 hover:bg-gray-50 px-3 py-2 rounded-md text-xl font-medium ${location.pathname == "/orderonline" ? "active" : ""}`}>Order Online</Link>
+                            <Link to="/about" className={`text-gray-900 hover:bg-gray-50 px-3 py-2 rounded-md text-xl font-medium ${location.pathname === "/about" ? "active" : ""}`}>About</Link>
+                            <Link to="/menu" className={`text-gray-900 hover:bg-gray-50 px-3 py-2 rounded-md text-xl font-medium ${location.pathname === "/menu" ? "active" : ""}`}>Menu</Link>
+                            <Link to="/reservation" className={`text-gray-900 hover:bg-gray-50 px-3 py-2 rounded-md text-xl font-medium ${location.pathname === "/reservation" ? "active" : ""}`}>Reservation</Link>
+                            <Link to="/orderonline" className={`hidden xl:block text-gray-900 hover:bg-gray-50 px-3 py-2 rounded-md text-xl font-medium ${location.pathname === "/orderonline" ? "active" : ""}`}>Order Online</Link>
                             <Link to="/orderonline" className="xl:hidden text-gray-900 hover:bg-gray-50 px-3 py-2 rounded-md text-xl font-medium">Order</Link>
-                            <Link to="/login" className={`text-gray-900 hover:bg-gray-50 px-3 py-2 rounded-md text-xl font-medium ${location.pathname == "/login" ? "active" : ""}`}>Login</Link>
+                            <Link to="/login" className={`text-gray-900 hover:bg-gray-50 px-3 py-2 rounded-md text-xl font-medium ${location.pathname === "/login" ? "active" : ""}`}>Login</Link>
                         </div>
                     </div>
                 </div>
