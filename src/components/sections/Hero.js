@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import Food7 from '../../assets/food/food7.webp'
 
 const Hero = () => {
@@ -8,7 +9,7 @@ const Hero = () => {
                 <h1 className='text-[#F4CE14] text-4xl font-serif'>Little Lemon</h1>
                 <h4 className='text-2xl text-white font-semibold'>Kolkata</h4>
                 <p className='text-white my-3 md:my-2 font-semibold text-xl md:text-lg text-center md:text-left'>We are a family owned Mediterratian resturant, focused on traditional recipes served with a mordern twist!</p>
-                <button type="button" className='bg-[#F4CE14] rounded-xl p-2 px-4 font-semibold hover:bg-[#F4CE50]'>Reserve a Table</button>
+                <Link to='/reservation'><button type="button" className='bg-[#F4CE14] rounded-xl p-2 px-4 font-semibold hover:bg-[#F4CE50]'>Reserve a Table</button></Link>
             </div>
             <div className='md:w-1/2 p-3 xl:p-10 xl:px-10 flex justify-center items-center'>
                 <img src={Food7} alt="food" className='w-full rounded-xl' />

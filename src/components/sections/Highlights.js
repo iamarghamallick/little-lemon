@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import Food4 from '../../assets/food/food4.webp'
 import Food2 from '../../assets/food/food2.jpeg'
 import Food3 from '../../assets/food/food3.jpeg'
@@ -17,7 +18,7 @@ const Highlights = () => {
                     <div className='p-5'>
                         <div className='flex justify-between'><span className='text-xl font-semibold font-serif'>Greek Salad</span><span className='text-red-500'>$12.99</span></div>
                         <p className='py-10'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore mollitia natus corporis ipsa eos animi inventore expedita explicabo sint placeat quod asperiores, officia impedit dolor.</p>
-                        <button className='font-semibold p-1 px-3 rounded-xl hover:bg-gray-50 flex items-center'><span>Order a delivery &nbsp;</span> <MdDeliveryDining size={30} /></button>
+                        <Link to='/orderonline'><button className='font-semibold p-1 px-3 rounded-xl hover:bg-gray-50 flex items-center'><span>Order a delivery &nbsp;</span> <MdDeliveryDining size={30} /></button></Link>
                     </div>
                 </div>
                 <div className="card bg-gray-100 rounded-xl">
@@ -25,7 +26,7 @@ const Highlights = () => {
                     <div className='p-5'>
                         <div className='flex justify-between'><span className='text-xl font-semibold font-serif'>Greek Salad</span><span className='text-red-500'>$12.99</span></div>
                         <p className='py-10'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore mollitia natus corporis ipsa eos animi inventore expedita explicabo sint placeat quod asperiores, officia impedit dolor.</p>
-                        <button className='font-semibold p-1 px-3 rounded-xl hover:bg-gray-50 flex items-center'><span>Order a delivery &nbsp;</span> <MdDeliveryDining size={30} /></button>
+                        <Link to='/orderonline'><button className='font-semibold p-1 px-3 rounded-xl hover:bg-gray-50 flex items-center'><span>Order a delivery &nbsp;</span> <MdDeliveryDining size={30} /></button></Link>
                     </div>
                 </div>
                 <div className="card bg-gray-100 rounded-xl">
@@ -33,7 +34,7 @@ const Highlights = () => {
                     <div className='p-5'>
                         <div className='flex justify-between'><span className='text-xl font-semibold font-serif'>Greek Salad</span><span className='text-red-500'>$12.99</span></div>
                         <p className='py-10'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore mollitia natus corporis ipsa eos animi inventore expedita explicabo sint placeat quod asperiores, officia impedit dolor.</p>
-                        <button className='font-semibold p-1 px-3 rounded-xl hover:bg-gray-50 flex items-center'><span>Order a delivery &nbsp;</span> <MdDeliveryDining size={30} /></button>
+                        <Link to='/orderonline'><button className='font-semibold p-1 px-3 rounded-xl hover:bg-gray-50 flex items-center'><span>Order a delivery &nbsp;</span> <MdDeliveryDining size={30} /></button></Link>
                     </div>
                 </div>
             </div>

@@ -10,6 +10,7 @@ const Reservations = () => {
     const [reservationData, setReservationData] = useState({ indoor: "", outdoor: "", date: "", occasion: "", diner: "", time: "" })
     const [reservationConfirmedData, setReservationConfirmedData] = useState({ ...reservationData, firstname: "", lastname: "", privacy: "", email: "", phone: "", comment: "" })
     const [proceedToReserve, setProceedToReserve] = useState(false)
+    const [confirmReservation, setConfirmReservation] = useState(false)
     const handleChange = (e) => {
         setReservationData({ ...reservationData, [e.target.name]: e.target.value })
         setReservationConfirmedData({ ...reservationConfirmedData, [e.target.name]: e.target.value })
@@ -22,6 +23,7 @@ const Reservations = () => {
     const handleReservationConfirm = () => {
         console.log(reservationConfirmedData)
         // todo - data validation
+        setConfirmReservation(true)
     }
     return (
         <>
@@ -129,11 +131,14 @@ const Reservations = () => {
                 <img src={GalleryImg2} alt="" srcSet="" className='w-[250px] rounded-2xl shadow-2xl shadow-[#495E57]' />
                 <img src={GalleryImg3} alt="" srcSet="" className='w-[250px] rounded-2xl shadow-2xl shadow-[#495E57]' />
             </div>
-            {!proceedToReserve && <div className='w-full flex justify-center py-8'>
+            {!proceedToReserve && !confirmReservation && <div className='w-full flex justify-center py-8'>
                 <button type="button" className='bg-[#F4CE14] rounded-xl p-2 px-4 font-semibold hover:bg-[#F4CE50]' onClick={handleReservation}>Reserve a Table</button>
             </div>}
-            {proceedToReserve && <div className='w-full flex justify-center py-8'>
+            {proceedToReserve && !confirmReservation && <div className='w-full flex justify-center py-8'>
                 <button type="button" className='bg-[#F4CE14] rounded-xl p-2 px-4 font-semibold hover:bg-[#F4CE50]' onClick={handleReservationConfirm}>Confirm Reservation</button>
+            </div>}
+            {confirmReservation && <div className='w-full flex justify-center py-8'>
+                <button disabled={true} type="button" className='bg-[#bbbbbb] rounded-xl p-2 px-4 font-semibold' onClick={handleReservationConfirm}>Your Reservation has been Confirmed</button>
             </div>}
         </>
     )
